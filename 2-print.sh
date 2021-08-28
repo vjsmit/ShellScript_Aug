@@ -14,3 +14,6 @@ echo -e "1.\tSmit\t\tDevOps\n2.\tShefali\t\tPython"
 echo -e "\e[33mYellow foreground colour\e[0m"
 
 echo "What si the color"
+
+
+echo -e "\e[34:31mRedOnBlue\e[0m"
