@@ -16,4 +16,4 @@ echo -e "\e[33mYellow foreground colour\e[0m"
 echo "What si the color"
 
 
-echo -e "\e[34;31mRed On Blue\e[0m"
+echo -e "\e[43;31mRed On Blue\e[0m"
