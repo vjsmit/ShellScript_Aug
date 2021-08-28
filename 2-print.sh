@@ -11,4 +11,6 @@ echo -e "Hello from new line1\nHello form new line2"
 echo -e "1.\tSmit\t\tDevOps\n2.\tShefali\t\tPython"
 
 
-\echo -e "\e[33mYellow foreground colour"
+echo -e "\e[33mYellow foreground colour"
+
+echo "What si the color"
