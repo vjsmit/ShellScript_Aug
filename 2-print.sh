@@ -17,3 +17,5 @@ echo "What si the color"
 
 
 echo -e "\e[43;31mRed On Blue\e[0m"
+
+echo -e "\e[42;34mHello Ji\e[0m"
