@@ -4,4 +4,4 @@
 
 DATE = date +%F
 
-Today's date is $DATE
+echo Today's date is $DATE
