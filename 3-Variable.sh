@@ -11,4 +11,4 @@ echo "Today date is $DATE"
 ADD=$(2+3)
 echo "Add of 2 and 3 = $ADD"
 
-echo 
+echo "Welcome to $CLASS Training"
