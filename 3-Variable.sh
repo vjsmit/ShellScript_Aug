@@ -2,10 +2,10 @@
 
 #Variables printing
 
-# DATE =$(date +%F)
+DATE =$(date +%F)
 
-# echo Today date is $DATE
-
-
-DATE=$(date +%F)
 echo "Today date is $DATE"
+
+
+# DATE=$(date +%F)
+# echo "Today date is $DATE"
