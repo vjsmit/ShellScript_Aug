@@ -1,5 +1,6 @@
 #!/bin/bash
 
+#Variables printing
 
 DATE = date +%F
 
