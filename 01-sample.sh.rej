@@ -1,8 +1,0 @@
-diff a/01-sample.sh b/01-sample.sh	(rejected hunks)
-@@ -4,4 +4,4 @@
- ls -l
- 
- 
--#Hi this is the sample file I created for testing purpose
-\ No newline at end of file
-+#Hi this is the sample file I created for testing purpose
