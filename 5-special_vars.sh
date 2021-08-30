@@ -11,4 +11,4 @@ echo All argument = $*
 
 echo All argument = $@
 
-echo $#
+echo No. of arguemnts = $#
