@@ -1,12 +1,14 @@
 #!/bin/bash
 
 
-echo $0
+echo script name = $0
 
-echo $1
+echo first argument = $1
 
-echo $1 $2 $3
+#echo $1 $2 $3
 
-echo $*
+echo All argument = $*
 
-echo $@
+echo All argument = $@
+
+echo $#
