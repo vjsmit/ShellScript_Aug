@@ -12,3 +12,5 @@ echo All argument = $*
 echo All argument = $@
 
 echo No. of arguemnts = $#
+
+echo "Hello $1, welcome $2 training, your password is $3"
