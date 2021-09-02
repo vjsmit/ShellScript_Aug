@@ -20,9 +20,10 @@ fi
 ls -ld /opt /opt1 &>/dev/null
 
 if ["$?" = 0]; then
-    echo Success
+    echo "Success"
 else
-    echo Failure
+    echo "Failure"
+    exit 2
 fi
 
 
