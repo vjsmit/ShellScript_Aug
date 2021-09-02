@@ -30,3 +30,4 @@ sample_var() {
 
 am=200
 echo "Value of af is $af"
+sample_var
