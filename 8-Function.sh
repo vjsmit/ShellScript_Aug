@@ -13,3 +13,12 @@ sampley() {
 }
 
 sampley 18 10
+
+
+samplez() {
+    echo Hello
+    return
+}
+
+samplez
+echo "Status of the function = $?"
