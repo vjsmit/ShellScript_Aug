@@ -16,16 +16,14 @@ else
     exit 1
 fi
 
-# if [ "$action" = "start" ]; then 
-#     echo "Starting the service"
-# elif [ "$action" = "stop" ]; then 
-#     echo "Stopping the service"
-# else 
-#     echo "Usage:: $0 start|stop"
-#     echo -e "\t ${R}start${N} -> Start the service"
-#     echo -e "\t ${R}stop${N}  -> Stop the service"
-#     exit 1
-# fi
+
+ls -ld /opt /opt1 &>/dev/null
+
+if ["$?" = 0]; then
+    echo Success
+else
+    echo Failure
+fi
 
 
 
