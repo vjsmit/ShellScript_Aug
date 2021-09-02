@@ -27,8 +27,8 @@ sample_var() {
     af=100
     echo "Value of am is $am"
 }
-
-am=200
 sample_var
+am=200
+
 echo "Value of af is $af"
 
