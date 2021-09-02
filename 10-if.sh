@@ -7,7 +7,6 @@ action=$1
 
 if ["$action"="start"]; then
     echo "Starting the service"
-
 elif["$action"="stop"]; then
     echo "Stoping the service"
 else
