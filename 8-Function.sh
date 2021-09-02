@@ -33,7 +33,7 @@ sample_var
 echo "Value of af is $af"
 
 sample_local() {
-    local a2 = 17
+    local a2=17
     echo "Value of a2 in function: $a2"
 }
 
