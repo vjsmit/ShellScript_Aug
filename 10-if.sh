@@ -11,8 +11,8 @@ elif [ "$action"="stop" ]; then
     echo "Stoping the service"
 else
     echo "Usage:: $0 start|stop"
-    echo "${R}start${N} ->starting the service"
-    echo "${R}stop${N} -> stoping the service"
+    echo -e "${R}start${N} ->starting the service"
+    echo -e "${R}stop${N} -> stoping the service"
     exit 1
 fi
 
