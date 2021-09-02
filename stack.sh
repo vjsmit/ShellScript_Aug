@@ -2,6 +2,13 @@
 
 ##Script to setuo both Web and App server
 
+##Check for root user
+USER_ID=$(id -u)
+if [ $USER_ID -ne 0 ]; then
+    echo "You should be root or sudo user to execute this command"
+    exit 1
+fi
+
 #Web server setup
 
 LOG=/tmp/stack.log
