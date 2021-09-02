@@ -17,6 +17,6 @@ yum install httpd -y &>>$LOG
 if [ $? -ne 0 ]; then
     echo "Script is a failure"
     echo "Refer Log file: $LOG"
-    exit 1
+    exit 2
 fi
 
