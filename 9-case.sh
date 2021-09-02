@@ -14,4 +14,5 @@ case $action in
         echo "Usage:: $0 Start|Stop"
         echo -e "\t ${R}Start${N} -> Starting the service"
         echo -e "\t ${R}Stop${N} -> Stopping the service"
+        exit 2
 esac
