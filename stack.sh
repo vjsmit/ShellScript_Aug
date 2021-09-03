@@ -30,6 +30,7 @@ Stat() {
         echo -e "${G}SUCCESS${N}"
     else
         echo -e "${G}FAILURE${N}"
+        echo -e "Refer the log file for more details -- $LOG"
     fi
 }
 ##Check for root user
