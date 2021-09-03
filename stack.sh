@@ -48,3 +48,19 @@ Print "Install HTTPD server"
 yum install httpd -y &>>$LOG
 Stat $?
 
+Print "Setup Proxy Config"
+echo 'ProxyPass "/student" "http://APP-SERVER-IPADDRESS:8080/student"
+ProxyPassReverse "/student"  "http://APP-SERVER-IPADDRESS:8080/student"
+' >/etc/httpd/conf.d/app-proxy.conf
+Stat $?
+
+Print "Setup Default Index Page"
+curl -s https://s3-us-west-2.amazonaws.com/studentapi-cit/index.html -o /var/www/html/index.html &>>$LOG
+Stat $?
+
+Print "Start HTTPD WebServer"
+systemctl enable httpd &>>$LOG
+systemctl restart httpd &>>$LOG
+Stat $?
+
+
