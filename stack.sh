@@ -12,6 +12,10 @@ Error() {
     echo -e "\n${R}$1${N}\n"
 }
 
+Head() {
+    echo "\t\t>>>>${Y}$1${N}\n<<<<"
+}
+
 ##Check for root user
 USER_ID=$(id -u)
 if [ $USER_ID -ne 0 ]; then
@@ -20,7 +24,8 @@ if [ $USER_ID -ne 0 ]; then
 fi
 
 #Web server setup
-echo -e "\t\t>>>>>>>>>>>${Y}Web Sever Setup${N}<<<<<<<<<<<<<<<<<<"
+Head Web Sever setup
+
 LOG=/tmp/stack.log
 rm -f /tmp/stack.log
 yum install httpd -y &>>$LOG
