@@ -13,7 +13,7 @@ Error() {
 }
 
 Head() {
-    echo "\t\t>>>>${Y}$1${N}\n<<<<"
+    echo -e "\t\t>>>>${Y}$1${N}\n<<<<"
 }
 
 ##Check for root user
