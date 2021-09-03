@@ -26,7 +26,7 @@ Print() {
 }
 
 Stat() {
-    if [ $? eq 0 ]; then
+    if [ $? -eq 0 ]; then
         echo -e "${G}SUCCESS${N}"
         echo -e "${G}FAILURE${N}"
     fi
