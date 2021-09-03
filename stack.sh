@@ -29,6 +29,7 @@ Stat() {
     if [ $? eq 0 ]; then
         echo -e "${G}SUCCESS${N}"
         echo -e "${G}FAILURE${N}"
+    fi
 }
 ##Check for root user
 USER_ID=$(id -u)
