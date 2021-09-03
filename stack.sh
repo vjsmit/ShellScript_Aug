@@ -10,8 +10,8 @@ N="\e[0m"
 BU="\e[1;4m"
 App_user=student
 App_home=/home/$App_user
-Tomcat_version=$(curl -s 'https://archive.apache.org/dist/tomcat/tomcat-9/?C=M;O=A' | grep 9.0 | tail -1 | awk '{print $5}' | awk   -F '"' '{print $2}' | sed -e 's/v//' -e 's/\///')
-Tomcat_URL="https://archive.apache.org/dist/tomcat/tomcat-9/v$Tomcat_version/bin/apache-tomcat-$Tomcat_version.tar.gz)"
+Tomcat_version=$(curl -s "https://archive.apache.org/dist/tomcat/tomcat-8/?C=M;O=A" | tail -4 | grep 8.5 | awk '{print $5}' | awk -F '"' '{print $2}' | sed -e 's/v//' -e 's/\///')
+Tomcat_URL="https://archive.apache.org/dist/tomcat/tomcat-8/v$Tomcat_version/bin/apache-tomcat-$Tomcat_version.tar.gz)"
     
 Tomcat_DIR=$App_home/apache-tomcat-${Tomcat_version}
 
