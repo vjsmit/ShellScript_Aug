@@ -2,15 +2,26 @@
 
 ##Script to setuo both Web and App server
 
+##Color Code
+R="\e[31m"
+G="\e[32m"
+Y="\e[33m"
+N="\e[0m"
+W=":negative_squared_cross_mark:"
+
+Error() {
+    echo -e "\n${R}$1${N}\n"
+}
+
 ##Check for root user
 USER_ID=$(id -u)
 if [ $USER_ID -ne 0 ]; then
-    echo "You should be root or sudo user to execute this command"
+    Error "${W}You should be root or sudo user to execute this command"
     exit 1
 fi
 
 #Web server setup
-
+echo -e "\t\t\t\t\t>>>>>>>>>>>${Y}Web Sever Setup${N}<<<<<<<<<<<<<<<<<<"
 LOG=/tmp/stack.log
 rm -f /tmp/stack.log
 yum install httpd -y &>>$LOG
