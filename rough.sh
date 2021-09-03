@@ -6,7 +6,7 @@ rm -f /tmp/stack.log
 APPUSER=student
 APPHOME=/home/$APPUSER
 ## Fetch the latest available version 
-TOMCAT_VERSION=$(curl -s "https://archive.apache.org/dist/tomcat/tomcat-8/?C=M;O=A" | grep 8.5 | tail -1 | awk '{print $5}' | awk -F '"' '{print $2}' | sed -e 's/v//' -e 's/\///')
+TOMCAT_VERSION=$(curl -s 'https://archive.apache.org/dist/tomcat/tomcat-9/?C=M;O=A' | grep 9.0 | tail -1 | awk '{print $5}' | a   -F '"' '{print $2}' | sed -e 's/v//' -e 's/\///)
 TOMCAT_URL="https://archive.apache.org/dist/tomcat/tomcat-8/v$TOMCAT_VERSION/bin/apache-tomcat-$TOMCAT_VERSION.tar.gz"
 TOMCAT_DIR=$APPHOME/apache-tomcat-$TOMCAT_VERSION
 
