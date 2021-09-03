@@ -99,6 +99,10 @@ Print "Downloading JDBC driver of DB"
 wget https://s3-us-west-2.amazonaws.com/studentapi-cit/mysql-connector.jar -O lib/mysql-connector.jar
 Stat $?
 
+Print "Fix Permissions\t"
+chown $App_user:$App_user $Tomcat_DIR -R &>>$LOG
+Stat $?
+
 
 
 
