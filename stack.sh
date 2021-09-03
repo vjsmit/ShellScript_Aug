@@ -31,13 +31,14 @@ Stat() {
     else
         echo -e "${G}FAILURE${N}"
         echo -e "Refer the log file for more details -- $LOG"
+        exit 1
     fi
 }
 ##Check for root user
 USER_ID=$(id -u)
 if [ $USER_ID -ne 0 ]; then
     Error "You should be root or sudo user to execute this command"
-    exit 1
+    exit 2
 fi
 
 #Web server setup
