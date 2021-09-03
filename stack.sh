@@ -77,5 +77,6 @@ else:
     Print "Creating User"
     useradd $App_user &>>LOG
     Stat $?
+fi
 
 
