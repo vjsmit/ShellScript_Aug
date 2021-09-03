@@ -30,7 +30,7 @@ Stat() {
     if [ $? -eq 0 ]; then
         echo -e "${G}SUCCESS${N}"
     else
-        echo -e "${G}FAILURE${N}"
+        echo -e "${R}FAILURE${N}"
         echo -e "Refer the log file for more details -- $LOG"
         exit 1
     fi
