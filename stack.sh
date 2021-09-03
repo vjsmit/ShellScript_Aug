@@ -7,15 +7,17 @@ R="\e[31m"
 G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
-B="\e[1m"
-U="\e[4m"
+BU="\e[1;4m"
+
+LOG=/tmp/stack.log
+rm -f /tmp/stack.log
 
 Error() {
     echo -e "\n${R}$1${N}\n"
 }
 
 Head() {
-    echo -e "\n\t\t>>>>${Y}${B}${U}$1${N}<<<<\n"
+    echo -e "\n\t\t>>>>${Y}${BU}$1${N}<<<<\n"
             
 }
 
@@ -29,8 +31,6 @@ fi
 #Web server setup
 Head "Web-Sever Setup"
 
-LOG=/tmp/stack.log
-rm -f /tmp/stack.log
 yum install httpd -y &>>$LOG
 if [ $? -ne 0 ]; then
     echo "Script is a failure"
