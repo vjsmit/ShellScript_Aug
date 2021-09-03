@@ -9,6 +9,11 @@ Y="\e[33m"
 N="\e[0m"
 BU="\e[1;4m"
 App_user=student
+App_home=/home/$App_user
+Tomcat_version=$(curl -s "https://archive.apache.org/dist/tomcat/tomcat-8/?C=M;O=A" | tail -4 | grep 8.5 | awk '{print $5}' | awk -F '"' '{print $2}' | sed -e 's/v//' -e 's/\///')
+Tomcat_URL=$(https://archive.apache.org/dist/tomcat/tomcat-8/v${Tomcat_version}/bin/apache-tomcat-${Tomcat_version}.tar.gz)
+Tomcat_DIR=$App_home/apache-tomcat-${Tomcat_version}
+
 
 LOG=/tmp/stack.log
 rm -f /tmp/stack.log
@@ -78,5 +83,21 @@ else
     useradd $App_user &>>LOG
     Stat $?
 fi
+
+cd App_home
+Print "Download tomcat service"
+wget -qO- $Tomcat_URL | tar -xz &>>$LOG
+Stat $?
+
+cd $Tomcat_DIR
+Print "Download Student Admission application"
+wget https://s3-us-west-2.amazonaws.com/studentapi-cit/student.war -O webapps/student.war &>>$LOG
+Stat $?
+
+Print "Downloading JDBC driver of DB"
+wget https://s3-us-west-2.amazonaws.com/studentapi-cit/mysql-connector.jar -O lib/mysql-connector.jar
+Stat $?
+
+
 
 
