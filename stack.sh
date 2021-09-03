@@ -70,8 +70,12 @@ Print "Install Java"
 yum install java -y &>>$LOG
 Stat $?
 
-Print "Adding user"
-useradd $App_user &>>LOG
-Stat $?
+id $App_user &>>LOG
+if [ $? == 0 ]; then
+    stat 0
+else:
+    Print "Creating User"
+    useradd $App_user &>>LOG
+    Stat $?
 
 
