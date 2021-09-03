@@ -9,13 +9,13 @@ Y="\e[33m"
 N="\e[0m"
 
 Error() {
-    echo -e "\n${R}$1${N}\n"
+    echo -e "\n${R}$2${N}\n"
 }
 
 ##Check for root user
 USER_ID=$(id -u)
 if [ $USER_ID -ne 0 ]; then
-    Error "❌You should be root or sudo user to execute this command"
+    Error "You should be root or sudo user to execute this command"
     exit 5
 fi
 
