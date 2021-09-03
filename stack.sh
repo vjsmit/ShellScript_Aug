@@ -22,7 +22,7 @@ Head() {
 }
 
 Print() {
-    echo -e "\n\t$1 - "
+    echo -n -e "\n\t$1 - "
 }
 
 Stat() {
