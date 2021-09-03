@@ -24,7 +24,7 @@ if [ $USER_ID -ne 0 ]; then
 fi
 
 #Web server setup
-Head Web Sever setup
+Head Web-Sever setup
 
 LOG=/tmp/stack.log
 rm -f /tmp/stack.log
