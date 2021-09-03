@@ -22,7 +22,13 @@ Head() {
 }
 
 Print() {
-    echo -e "\n\t${G}${BU}$1${N}\n"
+    echo -e "\n\t$1 - "
+}
+
+Stat() {
+    if [ $? eq 0 ]; then
+        echo -e "${G}SUCCESS${N}"
+        echo -e "${G}FAILURE${N}"
 }
 ##Check for root user
 USER_ID=$(id -u)
@@ -36,9 +42,5 @@ Head "Web-Sever Setup"
 Print "Installing HTTPD server"
 
 yum install httpd -y &>>$LOG
-if [ $? -ne 0 ]; then
-    echo "Script is a failure"
-    echo "Refer Log file: $LOG"
-    exit 2
-fi
+stat $?
 
