@@ -8,6 +8,7 @@ G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
 BU="\e[1;4m"
+App_user=student
 
 LOG=/tmp/stack.log
 rm -f /tmp/stack.log
@@ -61,6 +62,16 @@ Stat $?
 Print "Start HTTPD WebServer"
 systemctl enable httpd &>>$LOG
 systemctl restart httpd &>>$LOG
+Stat $?
+
+Head "App-Server Setup"
+
+Print "Install Java"
+yum install java -y &>>$LOG
+Stat $?
+
+Print "Adding user"
+useradd $App_user &>>LOG
 Stat $?
 
 
