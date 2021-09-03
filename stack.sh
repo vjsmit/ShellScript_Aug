@@ -7,13 +7,15 @@ R="\e[31m"
 G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
+B="\e[1m"
+U="\e[4m"
 
 Error() {
     echo -e "\n${R}$1${N}\n"
 }
 
 Head() {
-    echo -e "\n\t\t>>>>${Y}$1${N}<<<<\n"
+    echo -e "\n\t\t>>>>${Y}$B$U$1${N}<<<<\n"
             
 }
 
