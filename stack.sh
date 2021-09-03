@@ -72,7 +72,7 @@ Stat $?
 
 id $App_user &>>LOG
 if [ $? == 0 ]; then
-    stat 0
+    Stat 0
 else
     Print "Creating User"
     useradd $App_user &>>LOG
