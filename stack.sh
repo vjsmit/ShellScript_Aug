@@ -84,7 +84,7 @@ else
     Stat $?
 fi
 
-cd App_home
+cd $App_home
 Print "Download tomcat service"
 wget -qO- $Tomcat_URL | tar -xz &>>$LOG
 Stat $?
@@ -94,6 +94,7 @@ Print "Download Student Admission application"
 wget https://s3-us-west-2.amazonaws.com/studentapi-cit/student.war -O webapps/student.war &>>$LOG
 Stat $?
 
+cd $Tomcat_DIR
 Print "Downloading JDBC driver of DB"
 wget https://s3-us-west-2.amazonaws.com/studentapi-cit/mysql-connector.jar -O lib/mysql-connector.jar
 Stat $?
