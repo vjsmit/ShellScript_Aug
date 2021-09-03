@@ -7,7 +7,7 @@ R="\e[31m"
 G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
-W="0x78"
+THUMBS_UP='\U1F44D'
 
 Error() {
     echo -e "\n${R}$1${N}\n"
@@ -16,7 +16,7 @@ Error() {
 ##Check for root user
 USER_ID=$(id -u)
 if [ $USER_ID -ne 0 ]; then
-    Error "${W}You should be root or sudo user to execute this command"
+    Error "${THUMBS_UP}You should be root or sudo user to execute this command"
     exit 5
 fi
 
