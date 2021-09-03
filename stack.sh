@@ -15,7 +15,7 @@ Error() {
 }
 
 Head() {
-    echo -e "\n\t\t>>>>${Y}${BU}$1${N}<<<<\n"
+    echo -e "\n\t\t>>>>${Y}${B}${U}$1${N}<<<<\n"
             
 }
 
