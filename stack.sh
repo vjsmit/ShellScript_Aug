@@ -21,6 +21,9 @@ Head() {
             
 }
 
+Print() {
+    echo -e "\n\t${G}${BU}$1${N}\n"
+}
 ##Check for root user
 USER_ID=$(id -u)
 if [ $USER_ID -ne 0 ]; then
@@ -30,6 +33,7 @@ fi
 
 #Web server setup
 Head "Web-Sever Setup"
+Print "Installing HTTPD server"
 
 yum install httpd -y &>>$LOG
 if [ $? -ne 0 ]; then
