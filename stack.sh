@@ -7,7 +7,7 @@ R="\e[31m"
 G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
-W=":disappointed_relieved:"
+W="0x78"
 
 Error() {
     echo -e "\n${R}$1${N}\n"
@@ -17,7 +17,7 @@ Error() {
 USER_ID=$(id -u)
 if [ $USER_ID -ne 0 ]; then
     Error "${W}You should be root or sudo user to execute this command"
-    exit 1
+    exit 5
 fi
 
 #Web server setup
