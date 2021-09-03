@@ -88,6 +88,7 @@ fi
 cd $App_home
 Print "Download tomcat service"
 wget -qO- $Tomcat_URL &>>$LOG
+tar -xf apache-tomcat-$Tomcat_version.tar.gz
 Stat $?
 
 cd $Tomcat_DIR
