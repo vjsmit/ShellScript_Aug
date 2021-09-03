@@ -40,8 +40,8 @@ fi
 
 #Web server setup
 Head "Web-Sever Setup"
-Print "Installing HTTPD server"
+Print "Install HTTPD server"
 
 yum install httpd -y &>>$LOG
-stat $?
+Stat $?
 
