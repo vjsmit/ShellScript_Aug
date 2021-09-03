@@ -87,22 +87,22 @@ fi
 
 cd $App_home
 Print "Download tomcat service"
-wget -qO- $Tomcat_URL | tar -xz &>>$LOG
+wget -qO- $Tomcat_URL &>>$LOG
 Stat $?
 
-cd $Tomcat_DIR
-Print "Download Student Admission application"
-wget https://s3-us-west-2.amazonaws.com/studentapi-cit/student.war -O webapps/student.war &>>$LOG
-Stat $?
+# cd $Tomcat_DIR
+# Print "Download Student Admission application"
+# wget https://s3-us-west-2.amazonaws.com/studentapi-cit/student.war -O webapps/student.war &>>$LOG
+# Stat $?
 
-cd $Tomcat_DIR
-Print "Downloading JDBC driver of DB"
-wget https://s3-us-west-2.amazonaws.com/studentapi-cit/mysql-connector.jar -O lib/mysql-connector.jar &>>$LOG
-Stat $?
+# cd $Tomcat_DIR
+# Print "Downloading JDBC driver of DB"
+# wget https://s3-us-west-2.amazonaws.com/studentapi-cit/mysql-connector.jar -O lib/mysql-connector.jar &>>$LOG
+# Stat $?
 
-Print "Fix Permissions\t"
-chown $App_user:$App_user $Tomcat_DIR -R &>>$LOG
-Stat $?
+# Print "Fix Permissions\t"
+# chown $App_user:$App_user $Tomcat_DIR -R &>>$LOG
+# Stat $?
 
 
 
