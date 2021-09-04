@@ -50,12 +50,12 @@ fi
 
 #Web server setup
 Head "Web-Sever Setup"
-Print "Install HTTPD server"
+Print "Install HTTPD server\t"
 
 yum install httpd -y &>>$LOG
 Stat $?
 
-Print "Setup Proxy Config"
+Print "Setup Proxy Config\t"
 echo 'ProxyPass "/student" "http://APP-SERVER-IPADDRESS:8080/student"
 ProxyPassReverse "/student"  "http://APP-SERVER-IPADDRESS:8080/student"
 ' >/etc/httpd/conf.d/app-proxy.conf
@@ -65,18 +65,18 @@ Print "Setup Default Index Page"
 curl -s https://s3-us-west-2.amazonaws.com/studentapi-cit/index.html -o /var/www/html/index.html &>>$LOG
 Stat $?
 
-Print "Start HTTPD WebServer"
+Print "Start HTTPD WebServer\t"
 systemctl enable httpd &>>$LOG
 systemctl restart httpd &>>$LOG
 Stat $?
 
 Head "App-Server Setup"
 
-Print "Install Java"
+Print "Install Java\t\t\t"
 yum install java -y &>>$LOG
 Stat $?
 
-Print "Creating User"
+Print "Creating User\t\t\t"
 id $App_user &>>LOG
 if [ $? == 0 ]; then
     Stat 0
@@ -91,7 +91,7 @@ wget -qO- $Tomcat_URL | tar -xz &>>$LOG
 Stat $?
 
 cd $Tomcat_DIR
-Print "Download Student App"
+Print "Download Student App\t"
 wget https://s3-us-west-2.amazonaws.com/studentapi-cit/student.war -O webapps/student.war &>>$LOG
 Stat $?
 
