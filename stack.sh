@@ -91,7 +91,7 @@ wget -qO- $Tomcat_URL | tar -xz &>>$LOG
 Stat $?
 
 cd $Tomcat_DIR
-Print "Download Student Admission application"
+Print "Download Student App"
 wget https://s3-us-west-2.amazonaws.com/studentapi-cit/student.war -O webapps/student.war &>>$LOG
 Stat $?
 
