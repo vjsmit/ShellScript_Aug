@@ -107,7 +107,7 @@ Stat $?
 Print "Setup DB parameters"
 sed -i -e '$ i <Resource name="jdbc/TestDB" auth="Container" type="javax.sql.DataSource" maxTotal="100" maxIdle="30" maxWaitMillis="10000" username="USERNAME" 
 password="PASSWORD" driverClassName="com.mysql.jdbc.Driver" url="jdbc:mysql://RDS-DB-ENDPOINT:3306/DATABASE"/>'
- $Tomcat_DIR/conf/context.html
+ $Tomcat_DIR/conf/context.xml
 Stat $?
 
 
