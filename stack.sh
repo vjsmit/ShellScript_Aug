@@ -91,7 +91,7 @@ wget -qO- $Tomcat_URL | tar -xz &>>$LOG
 Stat $?
 
 cd $Tomcat_DIR
-Print "Download Student Admission application"
+Print "Download Student App"
 wget https://s3-us-west-2.amazonaws.com/studentapi-cit/student.war -O webapps/student.war &>>$LOG
 Stat $?
 
@@ -103,6 +103,24 @@ Stat $?
 Print "Fix Permissions\t"
 chown $App_user:$App_user $Tomcat_DIR -R &>>$LOG
 Stat $?
+
+
+
+Print "Download Tomcat init script"
+wget -q https://s3-us-west-2.amazonaws.com/studentapi-cit/tomcat-init -O /etc/init.d/tomcat &>>$LOG
+Stat $?
+
+Print "Init Script Permission Issue"
+chmod +x /etc/init.d/tomcat &>>$LOG
+Stat $?
+
+Print "Start Tomcat service"
+systemctl daemon-reload
+systemctl start tomcat
+Stat $?
+
+
+
 
 
 
