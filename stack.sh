@@ -111,9 +111,6 @@ password="PASSWORD" driverClassName="com.mysql.jdbc.Driver" url="jdbc:mysql://RD
 Stat $?
 
 
-
-
-
 Print "Download Tomcat init script"
 wget -q https://s3-us-west-2.amazonaws.com/studentapi-cit/tomcat-init -O /etc/init.d/tomcat &>>$LOG
 Stat $?
