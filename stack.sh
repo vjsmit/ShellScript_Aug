@@ -29,7 +29,7 @@ Head() {
 }
 
 Print() {
-    echo -n -e "\n\t$1\t -- "
+    echo -n -e "\n\t$1\t\t -- "
 }
 
 Stat() {
