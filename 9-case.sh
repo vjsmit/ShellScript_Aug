@@ -3,6 +3,7 @@
 action=$1
 R="\e[1;31m"
 G="\e[1;32m"
+Y="\e33m"
 N="\e[0m"
 case $action in
     start)
