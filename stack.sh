@@ -122,7 +122,7 @@ systemctl daemon-reload
 systemctl start tomcat
 Stat $?
 
-Head "Completed"
+Head "Done"
 
 
 
