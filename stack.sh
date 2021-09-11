@@ -56,8 +56,8 @@ yum install httpd -y &>>$LOG
 Stat $?
 
 Print "Setup Proxy Config\t"
-echo 'ProxyPass "/student" "http://APP-SERVER-IPADDRESS:8080/student"
-ProxyPassReverse "/student"  "http://APP-SERVER-IPADDRESS:8080/student"
+echo 'ProxyPass "/student" "http://localhost:8080/student"
+ProxyPassReverse "/student"  "http://localhost:8080/student"
 ' >/etc/httpd/conf.d/app-proxy.conf
 Stat $?
 
